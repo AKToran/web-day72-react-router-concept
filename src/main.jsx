@@ -16,18 +16,16 @@ const router = createBrowserRouter([
     path: '/',
     Component: Root,
     children: [
+      // this paths makes changes in Outlet
       {index: true, Component: Home},
       {path: 'mobiles', Component: Mobile},
       {path: 'laptops', Component: Laptops},
+      {path: 'app', Component: App}
     ]
 },
   {
     path: 'react',
     Component: App
-  },
-  {
-    path: 'app',
-    element: <App></App>
   },
 ])
 

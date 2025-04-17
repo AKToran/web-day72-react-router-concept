@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Header = () => {
   return (
     <div>
       <h1>this is header.</h1>
       <nav className="space-x-8 py-4">
-        <Link to={"/"}>Home</Link>
-        <Link to={"mobiles"}>Mobiles</Link>
-        <Link to={"laptops"}>Laptops</Link>
-        <Link to={"/react"}>React</Link>
+        <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"mobiles"}>Mobiles</NavLink>
+        <NavLink to={"laptops"}>Laptops</NavLink>
+        <NavLink to={"/app"}>React</NavLink>
       </nav>
     </div>
   );
