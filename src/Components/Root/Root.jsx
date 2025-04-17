@@ -8,10 +8,10 @@ const Root = () => {
   return (
     <div>
       <Header></Header>
-      <div className='flex gap-20 h-[400px]'>
+      <div className='min-h-[400px]'>
         <Sidebar></Sidebar>
-        <div>
-          <Outlet className=""></Outlet>
+        <div className='text-center'>
+          <Outlet></Outlet>
         </div>
       </div>
       <Footer></Footer>
