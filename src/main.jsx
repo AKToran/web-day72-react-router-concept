@@ -12,8 +12,8 @@ import Users2 from "./Components/users/Users2.jsx";
 import UserDetails from "./Components/users/UserDetails.jsx";
 
 const usersPromise = fetch("https://jsonplaceholder.typicode.com/users").then(
-  (res) => res.json()
-);
+    (res) => res.json()
+  );
 
 const router = createBrowserRouter([
   {
