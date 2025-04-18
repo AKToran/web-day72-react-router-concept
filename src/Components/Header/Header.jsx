@@ -6,7 +6,12 @@ const Header = () => {
     <div>
       <h1>this is header.</h1>
       <nav className="space-x-8 py-4">
-        <NavLink to={"/"}>Home</NavLink>
+        <NavLink style={({isActive, isPending}) => {
+          return {
+            fontWeight: isActive? "bold" : "",
+            color: isPending? "red": "green"
+          }
+        }} to={"/"}>Home</NavLink>
         <NavLink to={"/mobiles"}>Mobiles</NavLink>
         <NavLink to={"/laptops"}>Laptops</NavLink>
         <NavLink to={"/app"}>React</NavLink>
@@ -14,6 +19,7 @@ const Header = () => {
           <span>Users {isNavigating && <p>Loading...</p>}</span>
         )}</NavLink>
         <NavLink to={"/users2"}>Users2</NavLink>
+        <NavLink to={"/users3"}>Users3</NavLink>
       </nav>
     </div>
   );

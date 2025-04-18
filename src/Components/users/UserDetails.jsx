@@ -1,7 +1,12 @@
 import React from 'react';
-import { useLoaderData, useNavigate } from 'react-router';
+import { useLoaderData, useNavigate, useParams } from 'react-router';
 
 const UserDetails = () => {
+  // const params = useParams();
+  // console.log(params);
+  const { userId } = useParams();
+  console.log(userId);
+
   const user = useLoaderData();
   const navigate = useNavigate();
   return (

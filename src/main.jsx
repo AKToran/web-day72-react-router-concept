@@ -10,6 +10,7 @@ import Laptops from "./Components/Laptops/Laptops.jsx";
 import Users from "./Components/users/Users.jsx";
 import Users2 from "./Components/users/Users2.jsx";
 import UserDetails from "./Components/users/UserDetails.jsx";
+import Users3 from "./Components/users/Users3.jsx";
 
 const usersPromise = fetch("https://jsonplaceholder.typicode.com/users").then(
     (res) => res.json()
@@ -39,16 +40,28 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "users3",
+        element:<Users3></Users3>
+      },
+      {
         path: "users/:userId", 
         loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         Component: UserDetails
       },
+      {
+        path: '*',
+        element: <h1>404 Not found in nested</h1>
+      }
     ],
   },
   {
     path: "react",
     Component: App,
   },
+  {
+    path: '*',
+    element: <h1>404 Not found</h1>
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(

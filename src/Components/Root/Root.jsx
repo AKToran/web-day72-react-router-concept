@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../Header/Header';
-import { Outlet, useNavigation } from 'react-router';
+import { Outlet, useLocation, useNavigation } from 'react-router';
 import Footer from '../Footer/Footer';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Root = () => {
   const navigation = useNavigation();
   const isNavigating = Boolean(navigation.location);
-  console.log(navigation.state);
+  // console.log(navigation.state);
+
+  const location = useLocation();
+  useEffect(() =>{
+    console.log(location.pathname);
+  }, [location]);
 
   return (
     <div>
